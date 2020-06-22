@@ -1,0 +1,20 @@
+{
+  "easycom": {
+  	"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  },
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "小夜曲"
+			}
+		}
+	],
+  "requiredBackgroundModes": ["audio"],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "小夜曲",
+		"navigationBarBackgroundColor": "#0b0f14",
+		"backgroundColor": "#0b0f14"
+	}
+}
