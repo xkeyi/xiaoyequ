@@ -12,30 +12,31 @@
       </view>
       
       <view class="operate-icons">
-        <u-icon @click="playMode" :name="modes[curModel]" color="#fbf8f8" size="50"></u-icon>
-        <u-icon @click="last" name="skip-back-left" color="#fff" size="65"></u-icon>
-        <u-icon @click="playOrPause" :name="[pause ? 'play-circle-fill' : 'pause-circle-fill']" color="#fff" size="130"></u-icon>
+        <u-icon class="operate-icon" @click="playMode" :name="modes[curModel]" color="#fbf8f8" size="60"></u-icon>
+        <u-icon class="operate-icon" @click="last" name="skip-back-left" color="#fff" size="65"></u-icon>
+        <u-icon class="operate-icon" @click="playOrPause" :name="[pause ? 'play-circle-fill' : 'pause-circle-fill']" color="#fff" size="130"></u-icon>
         <!-- <u-icon name="play-circle-fill"></u-icon> -->
-        <u-icon @click="next" name="skip-forward-right" color="#fff" size="65"></u-icon>
-        <u-icon @click="toggleList" name="list-dot" color="#fbf8f8" size="50"></u-icon>
+        <u-icon class="operate-icon" @click="next" name="skip-forward-right" color="#fff" size="65"></u-icon>
+        <u-icon class="operate-icon" @click="toggleList" name="list-dot" color="#fbf8f8" size="60"></u-icon>
       </view>
     </view>
     
-    <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="60%" closeable="true">
-    	<view class="music-lists">
-        <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="playItem(index)">
+    <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" closeable="true">
+    	<scroll-view class="music-lists" scroll-y="true">
+        <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="play(index)">
            <view class="name">{{index+1 +'. '+ item.name}}</view>
            <view v-if="item.singer" class="singer">- {{item.singer}}</view>
         </view>
-      </view>
+      </scroll-view>
     </u-popup>
   </view>
 </template>
 
 <script>
   const bgAudioMannager = uni.getBackgroundAudioManager()
-  bgAudioMannager.coverImgUrl = ''
   
+  var musics = require("xiaoyequ.json")
+
 	export default {
 		data() {
 			return {
@@ -49,18 +50,19 @@
 			}
 		},
 		onLoad() {
-      uni.request({
-          url: 'http://cdn.xkeyi.top/xiaoyequ/xiaoyequ.json',
-          success: (res) => {
-            this.lists = res.data
-          },
-          fail: (res) => {
-            console.log(res)
-          }
-      })
+      this.lists = musics
+      // uni.request({
+      //     url: 'http://cdn.xkeyi.top/xiaoyequ/xiaoyequ.json',
+      //     success: (res) => {
+      //       this.lists = res.data
+      //     },
+      //     fail: (res) => {
+      //       console.log(res)
+      //     }
+      // })
 		},
 		methods: {
-      playOrPause() {
+      playOrPause() {        
         if (this.pause) {
           bgAudioMannager.play()
         } else {
@@ -80,37 +82,25 @@
         this.showListFlag = !this.showListFlag
       },
       play(index) {
-        this.pause = false
-        
-        var item = this.lists[index]
-        bgAudioMannager.title = item.title
-        bgAudioMannager.singer = item.singer
-        bgAudioMannager.src = item.src
-        bgAudioMannager.play()
-        
-        uni.setNavigationBarTitle({
-            title: item.title
-        });
-        
-        bgAudioMannager.onEnded(() => {
-          this.play(this.getNext())
-        })
-      },
-      playItem(index) {
         this.lastIndex = this.curIndex
         this.curIndex = index
         
-        this.play(index)
+        this.initPlay()
       },
       last() {
         this.pause = true
-        bgAudioMannager.stop()
-        this.play(this.lastIndex)
+        
+        this.curIndex = this.lastIndex
+        
+        this.initPlay()
       },
       next() {
         this.pause = true
-        bgAudioMannager.stop()
-        this.play(this.getNext())
+        
+        this.lastIndex = this.curIndex
+        this.curIndex = this.getNext()
+
+        this.initPlay()
       },
       getNext() {
         // 单曲循环
@@ -124,10 +114,52 @@
           next = this.getNext()
         }
         
-        this.lastIndex = this.curIndex
-        this.curIndex = next
+        return next
+      },
+      initPlay() {
+        var that = this
         
-        return this.curIndex
+        var item = that.lists[that.curIndex]
+
+        uni.setNavigationBarTitle({
+          title: item.title
+        })
+        
+        bgAudioMannager.title = item.title
+        bgAudioMannager.singer = item.singer
+        bgAudioMannager.src = item.src
+        bgAudioMannager.play()
+        
+        bgAudioMannager.onPlay(() => {
+        	that.pause = false
+        })
+        bgAudioMannager.onPause(() => {
+        	that.pause = true
+        })
+        bgAudioMannager.onEnded(() => {
+        	that.next()
+        })
+        bgAudioMannager.onTimeUpdate(() => {
+          //
+        })
+        bgAudioMannager.onPrev(() => {
+        	that.last()
+        })
+        bgAudioMannager.onNext(() => {
+        	that.next()
+        })
+        
+        bgAudioMannager.onError((error) => {
+          that.pause = true
+        	console.log(error)
+        })
+        bgAudioMannager.onWaiting(function() {
+        	that.pause = true
+        })
+        
+        bgAudioMannager.onCanplay(function() {
+          //
+        })
       }
 		}
 	}
@@ -201,13 +233,15 @@
 .operate-icons{
   margin: 80rpx 0 60rpx 0;
   display: flex;
-  u-icon {
+  .operate-icon {
+    flex: 1;
     margin: 20rpx;
     padding: 10rpx;
   }
 }
 
 .music-lists {
+  height: 90%;
   padding: 40rpx;
   margin-top: 30rpx;
   .item {
@@ -217,7 +251,7 @@
     align-items: center;
     .singer {
       margin-left: 20rpx;
-      font-size: 24rpx;
+      font-size: 26rpx;
     }
   }
 }
