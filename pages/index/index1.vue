@@ -19,6 +19,10 @@
         <view class="time">{{alltime}}</view>
       </view>
       
+      <!-- <view class="music-time">
+        <view class="time">{{nowtime}}</view>
+        <view class="time">{{alltime}}</view>
+      </view> -->
       <view class="operate-icons">
         <u-icon class="operate-icon" @click="playMode" :name="modes[curModel]" color="#fbf8f8" size="60"></u-icon>
         <u-icon class="operate-icon" @click="last" name="skip-back-left" color="#fff" size="65"></u-icon>
@@ -31,7 +35,7 @@
     
     <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" closeable="true">
     	<scroll-view class="music-lists" scroll-y="true">
-        <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="playItem(index)">
+        <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="play(index)">
            <view class="name">{{index+1 +'. '+ item.name}}</view>
            <view v-if="item.singer" class="singer">- {{item.singer}}</view>
         </view>
@@ -81,7 +85,7 @@
         } else {
           that.percent = Math.floor(this.curTime / this.duration * 100)
         }
-    
+
       	return i + ':' + s
       },
       alltime() {
@@ -96,9 +100,28 @@
       	//如果只有一位数，前面增加一个0
       	i = (i.length == 1) ? '0' + i : i
       	s = (s.length == 1) ? '0' + s : s
-      	
+      	console.log('alltime:'+i)
       	return i + ':' + s
-      }
+      },
+      // percent() {
+      //   if (this.duration == 0) {
+      //     return 10
+      //   }
+              
+      //   return Math.floor(this.curTime / this.duration * 100)
+      // }
+      // percent: {
+      //   get: function () {
+      //     if (this.duration == 0) {
+      //       return 10
+      //     }
+              
+      //     return Math.floor(this.curTime / this.duration * 100)
+      //   },
+      //   set: function (newValue) {
+      //     console.log('set:'+newValue)
+      //   }
+      // }
     },
 		onLoad() {
       this.lists = musics
@@ -132,7 +155,7 @@
       toggleList() {
         this.showListFlag = !this.showListFlag
       },
-      playItem(index) {
+      play(index) {
         this.lastIndex = this.curIndex
         this.curIndex = index
         
@@ -141,13 +164,18 @@
       last() {
         this.pause = true
         
+        this.duration = 0
+        this.curTime = 0
+        
         this.curIndex = this.lastIndex
         
         this.initPlay()
       },
       next() {
-        console.log('next')
         this.pause = true
+        
+        this.duration = 0
+        this.curTime = 0
         
         this.lastIndex = this.curIndex
         this.curIndex = this.getNext()
@@ -169,7 +197,9 @@
         return next
       },
       initPlay() {
-        var item = this.lists[this.curIndex]
+        var that = this
+        
+        var item = that.lists[that.curIndex]
 
         uni.setNavigationBarTitle({
           title: item.title
@@ -178,46 +208,46 @@
         bgAudioMannager.title = item.title
         bgAudioMannager.singer = item.singer
         bgAudioMannager.src = item.src
-        bgAudioMannager.play()
+        // bgAudioMannager.play()
         
         bgAudioMannager.onPlay(() => {
-        	this.pause = false
+        	that.pause = false
         })
         bgAudioMannager.onPause(() => {
-        	this.pause = true
+        	that.pause = true
         })
         bgAudioMannager.onEnded(() => {
-          if (!this.pause) {
-            this.next()
-          }
+        	that.next()
         })
         bgAudioMannager.onTimeUpdate(() => {
-          this.curTime = Math.floor(bgAudioMannager.currentTime)
+          that.curTime = Math.floor(bgAudioMannager.currentTime)
         })
         bgAudioMannager.onPrev(() => {
-        	this.last()
+        	that.last()
         })
         bgAudioMannager.onNext(() => {
-        	this.next()
+        	that.next()
         })
         
         bgAudioMannager.onError((error) => {
-          this.pause = true
+          that.pause = true
+        	console.log(error)
         })
         bgAudioMannager.onWaiting(function() {
-        	this.pause = true
+        	that.pause = true
         })
         
-        var that = this
         bgAudioMannager.onCanplay(function() {
           that.duration = Math.floor(bgAudioMannager.duration)
         })
       },
       sliderEnd() {
-        this.pause = true
+        // this.pause = true
         
         var seek = this.percent / 100 * this.duration
         bgAudioMannager.seek(seek)
+        
+        // this.pause = false
       }
 		}
 	}
@@ -295,12 +325,20 @@
   .time {
     color: #c7c2c2;
     flex: 0 0 80rpx;
-    margin-top: -15rpx;
+    margin-top: -20rpx;
   }
   .slider {
     flex: 1;
-    margin: 0 20rpx;
+    margin: 0 15rpx;
   }
+}
+
+.music-time {
+  width: 80%;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #c7c2c2;
 }
 
 .operate-icons{
