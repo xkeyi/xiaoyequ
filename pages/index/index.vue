@@ -34,10 +34,10 @@
     </view>
     
     <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" :closeable="popupCloseable">
-    	<scroll-view class="music-lists" scroll-y="true">
+    	<scroll-view class="music-lists" scroll-y="true" :scroll-top="scrollTop" @scroll="scroll">
         <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="playItem(index)">
-           <view class="name">{{index+1 +'. '+ item.name}}</view>
-           <view v-if="item.singer" class="singer">- {{item.singer}}</view>
+           <view class="name" :class="{ active: index == curIndex }">{{index+1 +'. '+ item.name}}</view>
+           <view v-if="item.singer" class="singer" :class="{ active: index == curIndex }">- {{item.singer}}</view>
         </view>
       </scroll-view>
     </u-popup>
@@ -68,11 +68,12 @@
         duration: 0, // 音频总时长
         percent: 0, // 当前播放进度
         popupCloseable: true,
+        scrollTop: 0,
+        oldScrollTop: 0,
 			}
 		},
     computed: {
       circleName() {
-        console.log(this.pause)
         if (this.pause) {
           return 'play-circle-fill'
         }
@@ -152,7 +153,17 @@
       },
       toggleList() {
         this.showListFlag = !this.showListFlag
+        this.goTop()
       },
+      scroll(e) {
+        this.oldScrollTop = e.detail.scrollTop
+      },
+      goTop() {
+        this.scrollTop = this.oldScrollTop
+        this.$nextTick(() => {
+          this.scrollTop = this.curIndex * 41
+        })
+      },  
       playItem(index) {
         this.lastIndex = this.curIndex
         this.curIndex = index
@@ -366,6 +377,9 @@
     .singer {
       margin-left: 20rpx;
       font-size: 26rpx;
+    }
+    .active {
+      color: #49B764;
     }
   }
 }
