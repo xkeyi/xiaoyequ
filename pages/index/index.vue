@@ -11,6 +11,11 @@
         </view>
       </view>
       
+      <view class="music-title">
+        <view class="name">{{curItem.name}}</view>
+        <view class="singer">{{curItem.singer}}</view>
+      </view>
+      
       <view class="music-progress">
         <view class="time">{{nowtime}}</view>
         <view class="slider">
@@ -22,14 +27,13 @@
       <view class="operate-icons">
         <u-icon class="operate-icon" @click="playMode" :name="modes[curModel]" color="#fbf8f8" size="60"></u-icon>
         <u-icon class="operate-icon" @click="last" name="skip-back-left" color="#fff" size="65"></u-icon>
-        <u-icon class="operate-icon" @click="playOrPause" :name="[pause ? 'play-circle-fill' : 'pause-circle-fill']" color="#fff" size="130"></u-icon>
-        <!-- <u-icon name="play-circle-fill"></u-icon> -->
+        <u-icon class="operate-icon" @click="playOrPause" :name="circleName" color="#fff" size="130"></u-icon>
         <u-icon class="operate-icon" @click="next" name="skip-forward-right" color="#fff" size="65"></u-icon>
         <u-icon class="operate-icon" @click="toggleList" name="list-dot" color="#fbf8f8" size="60"></u-icon>
       </view>
     </view>
     
-    <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" closeable="true">
+    <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" :closeable="popupCloseable">
     	<scroll-view class="music-lists" scroll-y="true">
         <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="playItem(index)">
            <view class="name">{{index+1 +'. '+ item.name}}</view>
@@ -43,12 +47,17 @@
 <script>
   const bgAudioMannager = uni.getBackgroundAudioManager()
   
-  var musics = require("xiaoyequ.json")
+  // var musics = require("xiaoyequ.json")
 
 	export default {
 		data() {
 			return {
-        lists: [],
+        lists: [{
+           "name": "小夜曲",
+           "singer": "小夜曲",
+           "title": "小夜曲",
+           "src": "http://cdn.xkeyi.top/xiaoyequ/%E5%B0%8F%E5%A4%9C%E6%9B%B2.mp3"
+         }],
         showListFlag: false,
         pause: true, // 暂停
         modes: ['reload', 'checkbox-mark'],
@@ -58,9 +67,18 @@
         curTime: 0, // 当前播放时间
         duration: 0, // 音频总时长
         percent: 0, // 当前播放进度
+        popupCloseable: true,
 			}
 		},
     computed: {
+      circleName() {
+        console.log(this.pause)
+        if (this.pause) {
+          return 'play-circle-fill'
+        }
+        
+        return 'pause-circle-fill'
+      },
       nowtime() {
       	//计算分钟：将秒数除以60，然后下舍入，既得到分钟数
       	var i = Math.floor(this.curTime / 60)
@@ -98,19 +116,22 @@
       	s = (s.length == 1) ? '0' + s : s
       	
       	return i + ':' + s
+      },
+      curItem() {
+        return this.lists[this.curIndex]
       }
     },
-		onLoad() {
-      this.lists = musics
-      // uni.request({
-      //     url: 'http://cdn.xkeyi.top/xiaoyequ/xiaoyequ.json',
-      //     success: (res) => {
-      //       this.lists = res.data
-      //     },
-      //     fail: (res) => {
-      //       console.log(res)
-      //     }
-      // })
+		async onLoad() {
+      // this.lists = musics
+      await uni.request({
+        url: 'http://cdn.xkeyi.top/xiaoyequ/xiaoyequ.json',
+        success: (res) => {
+          this.lists = res.data
+        },
+        fail: (res) => {
+          console.log(res)
+        }
+      })
 		},
 		methods: {
       playOrPause() {        
@@ -169,7 +190,8 @@
         return next
       },
       initPlay() {
-        var item = this.lists[this.curIndex]
+        var that = this
+        var item = this.curItem
 
         uni.setNavigationBarTitle({
           title: item.title
@@ -181,43 +203,45 @@
         bgAudioMannager.play()
         
         bgAudioMannager.onPlay(() => {
-        	this.pause = false
+        	that.pause = false
         })
         bgAudioMannager.onPause(() => {
-        	this.pause = true
+        	that.pause = true
         })
         bgAudioMannager.onEnded(() => {
-          if (!this.pause) {
-            this.next()
+          if (!that.pause) {
+            that.next()
           }
         })
         bgAudioMannager.onTimeUpdate(() => {
-          this.curTime = Math.floor(bgAudioMannager.currentTime)
+          that.curTime = Math.floor(bgAudioMannager.currentTime)
+          that.duration = Math.floor(bgAudioMannager.duration)
         })
         bgAudioMannager.onPrev(() => {
-        	this.last()
+        	that.last()
         })
         bgAudioMannager.onNext(() => {
-        	this.next()
+        	that.next()
         })
         
         bgAudioMannager.onError((error) => {
-          this.pause = true
+          //
         })
         bgAudioMannager.onWaiting(function() {
-        	this.pause = true
+          //
         })
         
-        var that = this
         bgAudioMannager.onCanplay(function() {
-          that.duration = Math.floor(bgAudioMannager.duration)
+          // that.duration = Math.floor(bgAudioMannager.duration)
         })
       },
       sliderEnd() {
-        this.pause = true
+        bgAudioMannager.pause()
         
         var seek = this.percent / 100 * this.duration
         bgAudioMannager.seek(seek)
+        
+        bgAudioMannager.play()
       }
 		}
 	}
@@ -288,9 +312,25 @@
   }
 }
 
+.music-title {
+  margin-top: 60rpx;
+  width: 88%;
+  text-align: left;
+  .name {
+    font-size: 38rpx;
+    color: #fff;
+    font-weight: bold;
+  }
+  .singer {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: #c7c2c2;
+  }
+}
+
 .music-progress {
   width: 90%;
-  margin-top: 80rpx;
+  margin-top: 40rpx;
   display: flex;
   .time {
     color: #c7c2c2;
@@ -304,12 +344,13 @@
 }
 
 .operate-icons{
-  margin: -40rpx 0 60rpx 0;
+  width: 90%;
+  margin: 0rpx 0 60rpx 0;
   display: flex;
+  justify-content: space-between;
   .operate-icon {
     flex: 1;
-    margin: 20rpx;
-    padding: 10rpx;
+    justify-content: center;
   }
 }
 
