@@ -33,11 +33,23 @@
       </view>
     </view>
     
-    <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" :closeable="popupCloseable">
+    <u-popup v-model="showListFlag" mode="bottom" border-radius="14" length="75%" :closeable="popupCloseable" @close="popClose">
+      <view class="search">
+        <u-search v-model="keyword" shape="round" :clearabled="true" :show-action="false"></u-search>
+      </view>
+      
     	<scroll-view class="music-lists" scroll-y="true" :scroll-top="scrollTop" @scroll="scroll">
-        <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="playItem(index)">
-           <view class="name" :class="{ active: index == curIndex }">{{index+1 +'. '+ item.name}}</view>
-           <view v-if="item.singer" class="singer" :class="{ active: index == curIndex }">- {{item.singer}}</view>
+        <view v-if="searchLists.length">
+          <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in searchLists" :key="index" @click="playItem(item.index)">
+             <view class="name" :class="{ active: item.index == curIndex }">{{index+1 +'. '+ item.name}}</view>
+             <view v-if="item.singer" class="singer" :class="{ active: item.index == curIndex }">- {{item.singer}}</view>
+          </view>
+        </view>
+        <view v-else>
+          <view class="item content-color u-border-top u-boder-bottom" v-for="(item, index) in lists" :key="index" @click="playItem(index)">
+             <view class="name" :class="{ active: index == curIndex }">{{index+1 +'. '+ item.name}}</view>
+             <view v-if="item.singer" class="singer" :class="{ active: index == curIndex }">- {{item.singer}}</view>
+          </view>
         </view>
       </scroll-view>
     </u-popup>
@@ -70,6 +82,7 @@
         popupCloseable: true,
         scrollTop: 0,
         oldScrollTop: 0,
+        keyword: '',
 			}
 		},
     computed: {
@@ -120,6 +133,22 @@
       },
       curItem() {
         return this.lists[this.curIndex]
+      },
+      searchLists() {
+        if (!this.showListFlag || this.keyword.length == 0) {
+          return []
+        }
+        
+        var res = [];
+        this.lists.forEach((item, index) => {
+          if (item.title.indexOf(this.keyword) != -1) {
+            var sitem = item
+            sitem.index = index
+            res.push(sitem)
+          }
+        })
+        
+        return res
       }
     },
 		async onLoad() {
@@ -161,9 +190,12 @@
       goTop() {
         this.scrollTop = this.oldScrollTop
         this.$nextTick(() => {
-          this.scrollTop = this.curIndex * 41
+          this.scrollTop = this.curIndex * 45
         })
       },  
+      popClose() {
+        this.keyword = ''
+      },
       playItem(index) {
         this.lastIndex = this.curIndex
         this.curIndex = index
@@ -365,10 +397,14 @@
   }
 }
 
+.search {
+  width: 80%;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
 .music-lists {
   height: 90%;
-  padding: 40rpx;
-  margin-top: 30rpx;
+  padding: 20rpx 40rpx 40rpx 40rpx;
   .item {
     font-size: 32rpx;
     padding: 20rpx 0;

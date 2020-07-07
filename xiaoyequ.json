@@ -1,5 +1,200 @@
 [
   {
+    "name": "需要人陪",
+    "singer": "徐薇",
+    "title": "徐薇 - 需要人陪",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E5%BE%90%E8%96%87%20-%20%E9%9C%80%E8%A6%81%E4%BA%BA%E9%99%AA.mp3"
+  },{
+    "name": "唯一",
+    "singer": "王力宏",
+    "title": "王力宏 - 唯一",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E5%94%AF%E4%B8%80.mp3"
+  },{
+    "name": "是你",
+    "singer": "王力宏",
+    "title": "是你--王力宏",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E6%98%AF%E4%BD%A0--%E7%8E%8B%E5%8A%9B%E5%AE%8F.mp3"
+  },{
+    "name": "另一个天堂",
+    "singer": "王力宏&张靓颖",
+    "title": "王力宏&张靓颖 - 另一个天堂",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%26%E5%BC%A0%E9%9D%93%E9%A2%96%20-%20%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%A4%A9%E5%A0%82.mp3"
+  },{
+    "name": "爱的就是你",
+    "singer": "王力宏",
+    "title": "王力宏 - 爱的就是你",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E7%88%B1%E7%9A%84%E5%B0%B1%E6%98%AF%E4%BD%A0.mp3"
+  },{
+    "name": "大城小爱",
+    "singer": "王力宏",
+    "title": "王力宏 - 大城小爱",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E5%A4%A7%E5%9F%8E%E5%B0%8F%E7%88%B1.mp3"
+  },{
+    "name": "改变自己",
+    "singer": "王力宏",
+    "title": "王力宏 - 改变自己",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E6%94%B9%E5%8F%98%E8%87%AA%E5%B7%B1.mp3"
+  },{
+    "name": "心中的日月",
+    "singer": "王力宏",
+    "title": "王力宏 - 心中的日月",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E5%BF%83%E4%B8%AD%E7%9A%84%E6%97%A5%E6%9C%88.mp3"
+  },{
+    "name": "星座",
+    "singer": "王力宏",
+    "title": "王力宏 - 星座",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E6%98%9F%E5%BA%A7.mp3"
+  },{
+    "name": "你不知道的事",
+    "singer": "王力宏",
+    "title": "王力宏 - 你不知道的事",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B.mp3"
+  },{
+    "name": "曹操",
+    "singer": "林俊杰",
+    "title": "曹操-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E6%9B%B9%E6%93%8D.mp3"
+  },{
+    "name": "杀手",
+    "singer": "林俊杰",
+    "title": "杀手-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%9D%80%E6%89%8B-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3"
+  },{
+    "name": "美人鱼",
+    "singer": "林俊杰",
+    "title": "美人鱼-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E7%BE%8E%E4%BA%BA%E9%B1%BC-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3"
+  },{
+    "name": "她说",
+    "singer": "林俊杰",
+    "title": "她说-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E5%A5%B9%E8%AF%B4-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3"
+  },{
+    "name": "江南",
+    "singer": "林俊杰",
+    "title": "江南-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%B1%9F%E5%8D%97-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3"
+  },{
+    "name": "醉赤壁",
+    "singer": "林俊杰",
+    "title": "醉赤壁-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E9%86%89%E8%B5%A4%E5%A3%81.mp3"
+  },{
+    "name": "被风吹过的夏天",
+    "singer": "林俊杰&金莎",
+    "title": "林俊杰&金莎 - 被风吹过的夏天",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%9E%97%E4%BF%8A%E6%9D%B0%26%E9%87%91%E8%8E%8E%20-%20%E8%A2%AB%E9%A3%8E%E5%90%B9%E8%BF%87%E7%9A%84%E5%A4%8F%E5%A4%A9.mp3"
+  },{
+    "name": "我终于失去了你",
+    "singer": "孙露",
+    "title": "孙露 - 我终于失去了你",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/sunlu/%E5%AD%99%E9%9C%B2%20-%20%E6%88%91%E7%BB%88%E4%BA%8E%E5%A4%B1%E5%8E%BB%E4%BA%86%E4%BD%A0.mp3"
+  },{
+    "name": "背对背拥抱",
+    "singer": "林俊杰",
+    "title": "背对背拥抱-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E8%83%8C%E5%AF%B9%E8%83%8C%E6%8B%A5%E6%8A%B1--%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3"
+  },{
+    "name": "手心的蔷薇",
+    "singer": "林俊杰&邓紫棋",
+    "title": "手心的蔷薇--林俊杰&邓紫棋",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%89%8B%E5%BF%83%E7%9A%84%E8%94%B7%E8%96%87--%E6%9E%97%E4%BF%8A%E6%9D%B0%26%E9%82%93%E7%B4%AB%E6%A3%8B.mp3"
+  },{
+    "name": "小酒窝",
+    "singer": "林俊杰&蔡卓妍",
+    "title": "林俊杰&蔡卓妍 - 小酒窝",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%9E%97%E4%BF%8A%E6%9D%B0%26%E8%94%A1%E5%8D%93%E5%A6%8D%20-%20%E5%B0%8F%E9%85%92%E7%AA%9D.mp3"
+  },{
+    "name": "学不会",
+    "singer": "林俊杰",
+    "title": "学不会-林俊杰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/linjunjie/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E5%AD%A6%E4%B8%8D%E4%BC%9A.mp3"
+  },{
+    "name": "雪落下的声音",
+    "singer": "周深",
+    "title": "雪落下的声音- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E9%9B%AA%E8%90%BD%E4%B8%8B%E7%9A%84%E5%A3%B0%E9%9F%B3-%20%E5%91%A8%E6%B7%B1.mp3"
+  },{
+    "name": "对不起",
+    "singer": "周深",
+    "title": "周深 - 对不起.",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20-%20%E5%AF%B9%E4%B8%8D%E8%B5%B7..mp3"
+  },{
+    "name": "大鱼",
+    "singer": "周深",
+    "title": "大鱼- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%A4%A7%E9%B1%BC-%20%E5%91%A8%E6%B7%B1.mp3"
+  },{
+    "name": "千与千寻",
+    "singer": "周深",
+    "title": "千与千寻- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%8D%83%E4%B8%8E%E5%8D%83%E5%AF%BB%E4%B8%BB%E9%A2%98%E6%9B%B2-%E5%91%A8%E6%B7%B1.mp3"
+  },{
+    "name": "不再流浪",
+    "singer": "周深",
+    "title": "不再流浪- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20-%20%E4%B8%8D%E5%86%8D%E6%B5%81%E6%B5%AA.mp3"
+  },{
+    "name": "过尽千帆",
+    "singer": "周深",
+    "title": "过尽千帆- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20-%20%E8%BF%87%E5%B0%BD%E5%8D%83%E5%B8%86.mp3"
+  },{
+    "name": "情意结",
+    "singer": "周深",
+    "title": "情意结- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20-%20%E6%83%85%E6%84%8F%E7%BB%93.mp3"
+  },{
+    "name": "一缕执念",
+    "singer": "周深",
+    "title": "一缕执念- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20%20-%20%E4%B8%80%E7%BC%95%E6%89%A7%E5%BF%B5.mp3"
+  },{
+    "name": "遇见",
+    "singer": "周深",
+    "title": "遇见- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1-%E9%81%87%E8%A7%81.mp3"
+  },{
+    "name": "直破穹苍",
+    "singer": "周深",
+    "title": "直破穹苍- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20-%20%E7%9B%B4%E7%A0%B4%E7%A9%B9%E8%8B%8D.mp3"
+  },{
+    "name": "拙慕",
+    "singer": "周深",
+    "title": "拙慕- 周深",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/zhoushen/%E5%91%A8%E6%B7%B1%20-%20%E6%8B%99%E6%85%95.mp3"
+  },{
+    "name": "玫瑰",
+    "singer": "贰佰",
+    "title": "玫瑰-贰佰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erbai/%E7%8E%AB%E7%91%B0-%E8%B4%B0%E4%BD%B0.mp3"
+  },{
+    "name": "狗日的青春",
+    "singer": "贰佰",
+    "title": "贰佰-狗日的青春",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erbai/%E7%8B%97%E6%97%A5%E7%9A%84%E9%9D%92%E6%98%A5-%E8%B4%B0%E4%BD%B0.mp3"
+  },{
+    "name": "爱你一万年",
+    "singer": "伍佰",
+    "title": "爱你一万年-伍佰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wubai/%E7%88%B1%E4%BD%A0%E4%B8%80%E4%B8%87%E5%B9%B4-%E4%BC%8D%E4%BD%B0.mp3"
+  },{
+    "name": "被动",
+    "singer": "伍佰",
+    "title": "被动-伍佰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wubai/%E4%BC%8D%E4%BD%B0-%E8%A2%AB%E5%8A%A8.mp3"
+  },{
+    "name": "爱你一万年",
+    "singer": "孙露",
+    "title": "爱你一万年-孙露",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/sunlu/%20%E7%88%B1%E4%BD%A0%E4%B8%80%E4%B8%87%E5%B9%B4%20-%20%E5%AD%99%E9%9C%B2.mp3"
+  },{
+    "name": "彩虹",
+    "singer": "伍佰",
+    "title": "彩虹-伍佰",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wubai/%E4%BC%8D%E4%BD%B0-%E5%BD%A9%E8%99%B9.mp3"
+  },{
     "name": "梵高先生",
     "singer": "李志",
     "title": "梵高先生 - 李志",
@@ -109,11 +304,6 @@
     "singer": "张学友",
     "title": "张学友 - 一千个伤心的理由",
     "src": "http://cdn.xkeyi.top/xiaoyequ/zhangxueyou/%E5%BC%A0%E5%AD%A6%E5%8F%8B%20-%20%E4%B8%80%E5%8D%83%E4%B8%AA%E4%BC%A4%E5%BF%83%E7%9A%84%E7%90%86%E7%94%B1.mp3"
-  },{
-    "name": "我终于失去了你",
-    "singer": "李宗盛",
-    "title": "李宗盛-我终于失去了你",
-    "src": "http://cdn.xkeyi.top/xiaoyequ/lizongsheng/%E6%9D%8E%E5%AE%97%E7%9B%9B-%E6%88%91%E7%BB%88%E4%BA%8E%E5%A4%B1%E5%8E%BB%E4%BA%86%E4%BD%A0.mp3"
   },{
     "name": "爱的代价",
     "singer": "李宗盛",
@@ -334,11 +524,6 @@
     "singer": "林志炫",
     "title": "离歌-林志炫",
     "src": "http://cdn.xkeyi.top/xiaoyequ/%E6%9E%97%E5%BF%97%E7%82%AB%20-%20%E7%A6%BB%E6%AD%8C.mp3"
-  },{
-    "name": "成都",
-    "singer": "赵雷",
-    "title": "成都-赵雷",
-    "src": "http://cdn.xkeyi.top/xiaoyequ/%E6%88%90%E9%83%BD-%E8%B5%B5%E9%9B%B7.mp3"
   },{
     "name": "三十岁的女人",
     "singer": "赵雷",
