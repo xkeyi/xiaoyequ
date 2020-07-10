@@ -25,11 +25,11 @@
       </view>
       
       <view class="operate-icons">
-        <u-icon class="operate-icon" @click="playMode" :name="modes[curModel]" color="#fbf8f8" size="60"></u-icon>
+        <u-icon class="operate-icon" @click="playMode" :name="modes[curModel]" color="#fbf8f8" size="55"></u-icon>
         <u-icon class="operate-icon" @click="last" name="skip-back-left" color="#fff" size="65"></u-icon>
         <u-icon class="operate-icon" @click="playOrPause" :name="circleName" color="#fff" size="130"></u-icon>
         <u-icon class="operate-icon" @click="next" name="skip-forward-right" color="#fff" size="65"></u-icon>
-        <u-icon class="operate-icon" @click="toggleList" name="list-dot" color="#fbf8f8" size="60"></u-icon>
+        <u-icon class="operate-icon" @click="toggleList" name="list-dot" color="#fbf8f8" size="55"></u-icon>
       </view>
     </view>
     
@@ -72,7 +72,7 @@
          }],
         showListFlag: false,
         pause: true, // 暂停
-        modes: ['reload', 'checkbox-mark'],
+        modes: ['reload', 'checkmark', 'question'], // 顺序、单曲、随机
         curModel: 0, // 当前模式
         curIndex: 0, // 当前序号
         lastIndex: 0, // 前一首序号
@@ -174,7 +174,7 @@
       },
       playMode() {
         var mode = this.curModel + 1
-        if (mode > 1) {
+        if (mode > 2) {
           this.curModel = 0
         } else {
           this.curModel = mode
@@ -210,7 +210,6 @@
         this.initPlay()
       },
       next() {
-        console.log('next')
         this.pause = true
         
         this.lastIndex = this.curIndex
@@ -219,13 +218,15 @@
         this.initPlay()
       },
       getNext() {
-        // 单曲循环
-        if (this.curModel == 1) { 
-         return this.curIndex
+        
+        if (this.curModel == 0) { // 顺序播放
+         var next = this.curIndex + 1
+        } else if (this.curModel == 1) { // 单曲循环
+          var next = this.curIndex
+        } else { // 随机播放
+          var next = parseInt(Math.random()*this.lists.length)
         }
         
-        // parseInt(Math.random()*(上限-下限+1)+下限); 
-        var next = parseInt(Math.random()*this.lists.length)
         if (next >= this.lists.length) {
           next = this.getNext()
         }

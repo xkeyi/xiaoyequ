@@ -1,9 +1,259 @@
 [
   {
+    "name": "蜗牛与黄鹂鸟",
+    "singer": "儿歌",
+    "title": "儿歌 - 蜗牛与黄鹂鸟",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E8%B4%9D%E7%93%A6%E5%84%BF%E6%AD%8C-%E8%9C%97%E7%89%9B%E4%B8%8E%E9%BB%84%E9%B9%82%E9%B8%9F.mp3"
+  }, {
+    "name": "丢手绢",
+    "singer": "儿歌",
+    "title": "儿歌 - 丢手绢",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E8%B4%9D%E7%93%A6%E5%84%BF%E6%AD%8C-%E4%B8%A2%E6%89%8B%E7%BB%A2.mp3"
+  }, {
+    "name": "世上只有妈妈好",
+    "singer": "儿歌",
+    "title": "儿歌 - 世上只有妈妈好",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E9%87%91%E9%93%AD-%E4%B8%96%E4%B8%8A%E5%8F%AA%E6%9C%89%E5%A6%88%E5%A6%88%E5%A5%BD.mp3"
+  }, {
+    "name": "读书郎",
+    "singer": "儿歌",
+    "title": "儿歌 - 读书郎",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E8%A2%81%E5%B0%8F%E5%88%9A-%E8%AF%BB%E4%B9%A6%E9%83%8E.mp3"
+  }, {
+    "name": "爸爸妈妈听我说",
+    "singer": "儿歌",
+    "title": "儿歌 - 爸爸妈妈听我说",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%AE%B5%E4%B8%BD%E9%98%B3-%E7%88%B8%E7%88%B8%E5%A6%88%E5%A6%88%E5%90%AC%E6%88%91%E8%AF%B4.mp3"
+  }, {
+    "name": "白龙马",
+    "singer": "儿歌",
+    "title": "儿歌 - 白龙马",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%A8%8A%E7%AB%B9%E9%9D%92-%E7%99%BD%E9%BE%99%E9%A9%AC.mp3"
+  }, {
+    "name": "爱我你就抱抱我",
+    "singer": "儿歌",
+    "title": "儿歌 - 爱我你就抱抱我",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%9E%97%E5%A6%99%E5%8F%AF-%E7%88%B1%E6%88%91%E4%BD%A0%E5%B0%B1%E6%8A%B1%E6%8A%B1%E6%88%91.mp3"
+  }, {
+    "name": "少年英雄小哪吒",
+    "singer": "儿歌",
+    "title": "儿歌 - 少年英雄小哪吒",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%9D%A8%E9%87%87%E9%92%B0-%E5%B0%91%E5%B9%B4%E8%8B%B1%E9%9B%84%E5%B0%8F%E5%93%AA%E5%90%92.mp3"
+  }, {
+    "name": "采蘑菇的小姑娘",
+    "singer": "儿歌",
+    "title": "儿歌 - 采蘑菇的小姑娘",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%9D%A8%E7%83%81-%E9%87%87%E8%98%91%E8%8F%87%E7%9A%84%E5%B0%8F%E5%A7%91%E5%A8%98.mp3"
+  }, {
+    "name": "小草",
+    "singer": "儿歌",
+    "title": "儿歌 - 小草",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%9D%A8%E7%83%81-%E5%B0%8F%E8%8D%89.mp3"
+  }, {
+    "name": "小蝌蚪找妈妈",
+    "singer": "儿歌",
+    "title": "儿歌 - 小蝌蚪找妈妈",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%9D%8E%E7%9F%A5%E9%81%A5-%E5%B0%8F%E8%9D%8C%E8%9A%AA%E6%89%BE%E5%A6%88%E5%A6%88.mp3"
+  }, {
+    "name": "我们是共产主义接班人",
+    "singer": "儿歌",
+    "title": "儿歌 - 我们是共产主义接班人",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E6%96%B0%E6%9C%88%E5%90%88%E5%94%B1%E5%9B%A2-%E6%88%91%E4%BB%AC%E6%98%AF%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E6%8E%A5%E7%8F%AD%E4%BA%BA.mp3"
+  }, {
+    "name": "茉莉花",
+    "singer": "儿歌",
+    "title": "儿歌 - 茉莉花",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%BC%A0%E7%8E%A5-%E8%8C%89%E8%8E%89%E8%8A%B1.mp3"
+  },{
+    "name": "鲁冰花",
+    "singer": "儿歌",
+    "title": "儿歌 - 鲁冰花",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E9%B2%81%E5%86%B0%E8%8A%B1.mp3"
+  },{
+    "name": "英文字母歌",
+    "singer": "儿歌",
+    "title": "儿歌 - 英文字母歌",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E8%8B%B1%E6%96%87%E5%AD%97%E6%AF%8D%E6%AD%8C.mp3"
+  },{
+    "name": "数鸭子",
+    "singer": "儿歌",
+    "title": "儿歌 - 数鸭子",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E6%95%B0%E9%B8%AD%E5%AD%90.mp3"
+  },{
+    "name": "打电话",
+    "singer": "儿歌",
+    "title": "儿歌 - 打电话",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E6%89%93%E7%94%B5%E8%AF%9D.mp3"
+  },{
+    "name": "我的好妈妈",
+    "singer": "儿歌",
+    "title": "儿歌 - 我的好妈妈",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E6%88%91%E7%9A%84%E5%A5%BD%E5%A6%88%E5%A6%88.mp3"
+  },{
+    "name": "小螺号",
+    "singer": "儿歌",
+    "title": "儿歌 - 小螺号",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E5%B0%8F%E8%9E%BA%E5%8F%B7.mp3"
+  },{
+    "name": "小老鼠上灯台",
+    "singer": "儿歌",
+    "title": "儿歌 - 小老鼠上灯台",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E5%B0%8F%E8%80%81%E9%BC%A0%E4%B8%8A%E7%81%AF%E5%8F%B0.mp3"
+  },{
+    "name": "小白兔乖乖",
+    "singer": "儿歌",
+    "title": "儿歌 - 小白兔乖乖",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E5%B0%8F%E7%99%BD%E5%85%94%E4%B9%96%E4%B9%96.mp3"
+  },{
+    "name": "小星星",
+    "singer": "儿歌",
+    "title": "儿歌 - 小星星",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E5%B0%8F%E6%98%9F%E6%98%9F.mp3"
+  },{
+    "name": "卖汤圆",
+    "singer": "儿歌",
+    "title": "儿歌 - 卖汤圆",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E5%8D%96%E6%B1%A4%E5%9C%86.mp3"
+  },{
+    "name": "卖报歌",
+    "singer": "儿歌",
+    "title": "儿歌 - 卖报歌",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E5%8D%96%E6%8A%A5%E6%AD%8C.mp3"
+  },{
+    "name": "两只老虎",
+    "singer": "儿歌",
+    "title": "儿歌 - 两只老虎",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E4%B8%A4%E5%8F%AA%E8%80%81%E8%99%8E.mp3"
+  },{
+    "name": "一分钱",
+    "singer": "儿歌",
+    "title": "儿歌 - 一分钱",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/erge/%E5%84%BF%E6%AD%8C-%E4%B8%80%E5%88%86%E9%92%B1.mp3"
+  },{
     "name": "需要人陪",
     "singer": "徐薇",
     "title": "徐薇 - 需要人陪",
     "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E5%BE%90%E8%96%87%20-%20%E9%9C%80%E8%A6%81%E4%BA%BA%E9%99%AA.mp3"
+  },{
+    "name": "需要人陪",
+    "singer": "王力宏",
+    "title": "王力宏 - 需要人陪",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/wanglihong/%E7%8E%8B%E5%8A%9B%E5%AE%8F-%E9%9C%80%E8%A6%81%E4%BA%BA%E9%99%AA.mp3"
+  },{
+    "name": "阿楚姑娘",
+    "singer": "伦桑",
+    "title": "阿楚姑娘 - 伦桑",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/lunsang/%E4%BC%A6%E6%A1%91-%E9%98%BF%E6%A5%9A%E5%A7%91%E5%A8%98.mp3"
+  },{
+    "name": "苦行僧",
+    "singer": "伦桑",
+    "title": "伦桑 - 苦行僧",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/lunsang/%E4%BC%A6%E6%A1%91-%E8%8B%A6%E8%A1%8C%E5%83%A7.mp3"
+  },{
+    "name": "理想三旬",
+    "singer": "伦桑",
+    "title": "伦桑- 理想三旬",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/lunsang/%E4%BC%A6%E6%A1%91-%E7%90%86%E6%83%B3%E4%B8%89%E6%97%AC%EF%BC%88Cover%20%E9%99%88%E9%B8%BF%E5%AE%87%EF%BC%89.mp3"
+  },{
+    "name": "年少有为",
+    "singer": "伦桑",
+    "title": "伦桑 - 年少有为",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/lunsang/%E4%BC%A6%E6%A1%91-%E5%B9%B4%E5%B0%91%E6%9C%89%E4%B8%BA.mp3"
+  },{
+    "name": "月牙湾",
+    "singer": "伦桑",
+    "title": "伦桑 - 月牙湾",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/lunsang/%E4%BC%A6%E6%A1%91-%E6%9C%88%E7%89%99%E6%B9%BE.mp3"
+  },{
+    "name": "傲寒",
+    "singer": "马頔",
+    "title": "马頔 - 傲寒",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/madi/%E9%A9%AC%E9%A0%94-%E5%82%B2%E5%AF%92.mp3"
+  },{
+    "name": "大雁",
+    "singer": "马頔",
+    "title": "马頔 - 大雁",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/madi/%E9%A9%AC%E9%A0%94-%E5%A4%A7%E9%9B%81.mp3"
+  },{
+    "name": "南山南",
+    "singer": "马頔",
+    "title": "马頔 - 南山南",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/madi/%E9%A9%AC%E9%A0%94-%E5%8D%97%E5%B1%B1%E5%8D%97.mp3"
+  },{
+    "name": "一个人的北京",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 一个人的北京",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%8C%97%E4%BA%AC.mp3"
+  },{
+    "name": "你曾是少年",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 你曾是少年",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E4%BD%A0%E6%9B%BE%E6%98%AF%E5%B0%91%E5%B9%B4.mp3"
+  },{
+    "name": "你飞到城市另一边",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 你飞到城市另一边",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E4%BD%A0%E9%A3%9E%E5%88%B0%E5%9F%8E%E5%B8%82%E5%8F%A6%E4%B8%80%E8%BE%B9.mp3"
+  },{
+    "name": "南来的风",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 -南来的风",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E5%8D%97%E6%9D%A5%E7%9A%84%E9%A3%8E.mp3"
+  },{
+    "name": "我到外地去看你",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 我到外地去看你",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E6%88%91%E5%88%B0%E5%A4%96%E5%9C%B0%E5%8E%BB%E7%9C%8B%E4%BD%A0.mp3"
+  },{
+    "name": "我在未来等你",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 我在未来等你",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E6%88%91%E5%9C%A8%E6%9C%AA%E6%9D%A5%E7%AD%89%E4%BD%A0.mp3"
+  },{
+    "name": "我说今晚月光那么美，你说是的",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 我说今晚月光那么美，你说是的",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E6%88%91%E8%AF%B4%E4%BB%8A%E6%99%9A%E6%9C%88%E5%85%89%E9%82%A3%E4%B9%88%E7%BE%8E%EF%BC%8C%E4%BD%A0%E8%AF%B4%E6%98%AF%E7%9A%84.mp3"
+  },{
+    "name": "清平调",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 清平调",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E6%B8%85%E5%B9%B3%E8%B0%83.mp3"
+  },{
+    "name": "相思赋予谁",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 相思赋予谁",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E7%9B%B8%E6%80%9D%E8%B5%8B%E4%BA%88%E8%B0%81.mp3"
+  },{
+    "name": "青城山下白素贞",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 青城山下白素贞",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E9%9D%92%E5%9F%8E%E5%B1%B1%E4%B8%8B%E7%99%BD%E7%B4%A0%E8%B4%9E.mp3"
+  },{
+    "name": "风从海面吹过来",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 风从海面吹过来",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%20%28%E5%A5%BD%E5%A6%B9%E5%A6%B9%E4%B9%90%E9%98%9F%29-%E9%A3%8E%E4%BB%8E%E6%B5%B7%E9%9D%A2%E5%90%B9%E8%BF%87%E6%9D%A5.mp3"
+  },{
+    "name": "晚风",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 晚风",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9%2C%E5%B0%8F%E5%A8%9F%20%26%20%E5%B1%B1%E8%B0%B7%E9%87%8C%E7%9A%84%E5%B1%85%E6%B0%91-%E6%99%9A%E9%A3%8E.mp3"
+  },{
+    "name": "不说再见",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 不说再见",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9-%E4%B8%8D%E8%AF%B4%E5%86%8D%E8%A7%81.mp3"
+  },{
+    "name": "往事只能回味",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 往事只能回味",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%A5%BD%E5%A6%B9%E5%A6%B9-%E5%BE%80%E4%BA%8B%E5%8F%AA%E8%83%BD%E5%9B%9E%E5%91%B3.mp3"
+  },{
+    "name": "送情郎",
+    "singer": "好妹妹乐队",
+    "title": "好妹妹乐队 - 送情郎",
+    "src": "http://cdn.xkeyi.top/xiaoyequ/haomeimei/%E5%B2%B3%E4%BA%91%E9%B9%8F%2C%E5%A5%BD%E5%A6%B9%E5%A6%B9-%E9%80%81%E6%83%85%E9%83%8E.mp3"
   },{
     "name": "唯一",
     "singer": "王力宏",
